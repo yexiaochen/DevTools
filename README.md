@@ -13,7 +13,7 @@ category:
 工欲善其事必先利其器，更何况，工具的学习成本比专业技能的学习成本小的多。
 
 Chrome 有不同版本，如果想第一时间体验一些新的功能可以使用除稳定版本的其它版本。
-![Chrome](../images/Chrome.png)
+![Chrome](http://www.yexiaochen.com/images/Chrome.png)
 
 本次主要围绕着 Workspace 和 Blockbox script 这两点来感受它们带来的便利。
 
@@ -25,7 +25,7 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 此时我们依然可以 DevTools 里 `Sources` 页签里的 `Filesystem` 页签添加本地文件夹，从浏览器里修改本地文件。
 
-![Filesystem](../images/Filesystem.gif)
+![Filesystem](http://www.yexiaochen.com/images/Filesystem.gif)
 
 这个功能或许还有点用，但是还是不如人意。因为修改后的文件需要刷新后才能显示变动，而文件被更改后，打包工具需要重新编译，编译时间或许很长或许很短，而且页面被被整体刷新了，给人一种很生硬的感觉。
 
@@ -69,7 +69,7 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 至此，热组件替换改造完成，让我们再次感受下。
 
-![HMR](../images/HMR.gif)
+![HMR](http://www.yexiaochen.com/images/HMR.gif)
 
 通过以上展示，我们可以发现，整个界面只是局部被替换了，过渡得很自然。这应该才是我们想要的效果✨。插一句，在 `Network` 页签中，Preserve log 一定要勾选上☑️。这样的话，即使页面刷新了，也是有记录📝的，非常方便在页面跳转刷新时使用。
 
@@ -87,13 +87,13 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 遇到这种情况就可以尝试用调用栈的方法，既然执行了，肯定是有调用的地方，我们可以沿着链去找源头（十有八九是我们自己写的代码😏）。不过调用栈中可能混杂了不是我们自己写的函数，这时候 `Blockbox script` 就派上用场了。
 
-![callStack](../images/callStack.gif)
+![callStack](http://www.yexiaochen.com/images/callStack.gif)
 
 ### Event Listener Breakpoints
 
 可能在熟悉一个新的项目时，想知道某个 dom 绑定的处理事件。`Blockbox script` 页签下的 `Event Listener Breakpoints` 可以定位到代码具体的位置，不过和上次一样，好多其它代码混淆视听，我们需要把他们标记为 `Blockbox script`。标记完后，下次就会直接在自己的代码里停住了。
 
-![eventListener](../images/eventListener.gif)
+![eventListener](http://www.yexiaochen.com/images/eventListener.gif)
 
 ### Initiator
 
@@ -107,7 +107,7 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 还好，Network 页签下的 `Initiator` 也有类似调用栈的东西，我们可以在其列表中找到，`Blockbox script` 的功能依然时屏蔽无关的代码。
 
-![Initiator](../images/initiator.gif)
+![Initiator](http://www.yexiaochen.com/images/initiator.gif)
 
 ## 补充
 
@@ -115,14 +115,14 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 1⃣️：有时候我们看见了控制有错误❌输出，却不知道是哪里的问题。或者是控制有报错❌，但一闪而过，无法捕捉。这时候可以尝试使用异常断点的功能(最右➡️的那个)。倒数第二个，是用来恢复函数执行的，使断点不起作用。
 
-![exceptions](../images/exceptions.png)
+![exceptions](http://www.yexiaochen.com/images/exceptions.png)
 
 2⃣️：数据量过大时，可能由于某一条数据的问题导致了页面渲染问题。如果打断点的话，数据量太大了，每一次都跳到循环的处理逻辑中会很麻烦。不过断点是支持条件断点的，还可以打印我们想要的变量（在最新的 Chrome dev版本中，已单独拎出来了）。
 
-![loop](../images/loop.gif)
+![loop](http://www.yexiaochen.com/images/loop.gif)
 
 3⃣️：有时候页面加载过快，都来不及看明白页面是怎么展示的。比如跳转问题，比如模拟网速慢、电脑性能卡慢问题。（这里十有八九是并发引起的竞态问题😏）右下角 Oneline 可自选模式。
 
-![netSpeed](../images/netSpeed.png)
+![netSpeed](http://www.yexiaochen.com/images/netSpeed.png)
 
 4⃣️：......
