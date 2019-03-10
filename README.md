@@ -15,7 +15,7 @@ category:
 Chrome 有不同版本，如果想第一时间体验一些新的功能可以使用除稳定版本的其它版本。
 ![Chrome](http://www.yexiaochen.com/images/Chrome.png)
 
-本次主要围绕着 Workspace 和 Blockbox script 这两点来感受它们带来的便利。
+本次主要围绕着 Workspace 和 Blackbox script 这两点来感受它们带来的便利。
 
 ## Workspace
 
@@ -73,11 +73,11 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 通过以上展示，我们可以发现，整个界面只是局部被替换了，过渡得很自然。这应该才是我们想要的效果✨。插一句，在 `Network` 页签中，Preserve log 一定要勾选上☑️。这样的话，即使页面刷新了，也是有记录📝的，非常方便在页面跳转刷新时使用。
 
-## Blockbox script
+## Blackbox script
 
-如果说以上是提高了开发上的效率，那么这个 `Blockbox script` 功能将会在定位上省下不少时间。
+如果说以上是提高了开发上的效率，那么这个 `Blackbox script` 功能将会在定位上省下不少时间。
 
-在断点排查问题时，代码总会在不同的位置切换。但是，经常会遇到各种不是我们程序里的代码跳出来。不过，只要我们把该文件标记为 `Blockbox script` 时，下次就不会再出现了。当然这只是最基本的操作，要想充分利用这个功能，还是要配合其它功能的使用。
+在断点排查问题时，代码总会在不同的位置切换。但是，经常会遇到各种不是我们程序里的代码跳出来。不过，只要我们把该文件标记为 `Blackbox script` 时，下次就不会再出现了。当然这只是最基本的操作，要想充分利用这个功能，还是要配合其它功能的使用。
 
 ### Call Stack
 
@@ -85,13 +85,13 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 排查错误时也是这个道理，我们经常遇到不知名的错误❌，可能是调用第三方的，也可能是底层，总之不是我们写的代码（我信你个鬼😏）。
 
-遇到这种情况就可以尝试用调用栈的方法，既然执行了，肯定是有调用的地方，我们可以沿着链去找源头（十有八九是我们自己写的代码😏）。不过调用栈中可能混杂了不是我们自己写的函数，这时候 `Blockbox script` 就派上用场了。
+遇到这种情况就可以尝试用调用栈的方法，既然执行了，肯定是有调用的地方，我们可以沿着链去找源头（十有八九是我们自己写的代码😏）。不过调用栈中可能混杂了不是我们自己写的函数，这时候 `Blackbox script` 就派上用场了。
 
 ![callStack](http://www.yexiaochen.com/images/callStack.gif)
 
 ### Event Listener Breakpoints
 
-可能在熟悉一个新的项目时，想知道某个 dom 绑定的处理事件。`Blockbox script` 页签下的 `Event Listener Breakpoints` 可以定位到代码具体的位置，不过和上次一样，好多其它代码混淆视听，我们需要把他们标记为 `Blockbox script`。标记完后，下次就会直接在自己的代码里停住了。
+可能在熟悉一个新的项目时，想知道某个 dom 绑定的处理事件。`Sources` 页签下的 `Event Listener Breakpoints` 可以定位到代码具体的位置，不过和上次一样，好多其它代码混淆视听，我们需要把它们标记为 `Blackbox script`。标记完后，下次就会直接在自己的代码里停住了。
 
 ![eventListener](http://www.yexiaochen.com/images/eventListener.gif)
 
@@ -99,13 +99,13 @@ Workspace 主要还是将浏览器关联本地文件，使得浏览器拥有读�
 
 其实和 `Event Listener Breakpoints` 并排的 `XHR/fetch Breakpoints` 也很有用，不过和接下来要讲的功能比，就显得鸡肋了。
 
-在 Network 页签中，记录的都是请求的数据。在开发的时候常遇到这两种情况，
-1⃣️：接口报错，在 Network 页签中可以看到整个URL被标红了，要快速定位到调用接口的地方。
+在 `Network` 页签中，记录的都是请求的数据。在开发的时候常遇到这两种情况，
+1⃣️：接口报错，在 `Network` 页签中可以看到整个URL被标红了，要快速定位到调用接口的地方。
 2⃣️：请求出去了，请看看响应时，如何处理数据。
 
 其实，两个实质上都是一样，就是快速定位代码。快速定位在大型项目中还是挺麻烦的，除非业务比较熟，剩下只能全局搜索了。
 
-还好，Network 页签下的 `Initiator` 也有类似调用栈的东西，我们可以在其列表中找到，`Blockbox script` 的功能依然时屏蔽无关的代码。
+还好，Network 页签下的 `Initiator` 也有类似调用栈的东西，我们可以在其列表中找到，`Blackbox script` 的功能依然时屏蔽无关的代码。
 
 ![Initiator](http://www.yexiaochen.com/images/initiator.gif)
 
